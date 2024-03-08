@@ -1,6 +1,13 @@
 import FunctionPage from 'src/pages/IndexPage.vue'
 import { shallowMount } from '@vue/test-utils'
 
+test("name Peeraphat Bangkan 6404101329 Avaliable on file",()=>{
+  const wrapper = shallowMount(FunctionPage)
+  expect(wrapper.find("#firstName").element.value).toBe("Peeraphat")
+  expect(wrapper.find("#lastName").element.value).toBe("Bangkan")
+  expect(wrapper.find("#id").element.value).toBe("6404101329")
+})
+
 describe('IndexPage', () => {
   it('should render correct contents', () => {
     const wrapper = shallowMount(FunctionPage)
@@ -44,3 +51,4 @@ test('trigger click event on button ', async () => {
   await button.trigger('click')
   expect(wrapper.vm.addition(1,2)).toBe(3)
 })
+

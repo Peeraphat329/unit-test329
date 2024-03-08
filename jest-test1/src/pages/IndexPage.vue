@@ -9,6 +9,9 @@
       <button @click="subtraction(firstValue,secondValue)" >Subtraction</button>
       <button @click="multiplication(firstValue,secondValue)" >Multiplication</button>
       <button @click="divide(firstValue,secondValue)" >Divide</button>
+      <input type="text" id="firstName" v-model="firstName" />
+      <input type="text" id="lastName" v-model="lastName" />
+      <input type="text" id="id" v-model="id" />
   </form>
   </div>
 </template>
@@ -21,7 +24,10 @@ export default {
       title: 'Vue is awesome.',
       firstValue:0,
       secondValue:0,
-      answerVulue:0
+      answerVulue:0,
+      firstName:"Peeraphat",
+      lastName:"Bangkan",
+      id:"6404101329"
     }
   },
   methods: {
